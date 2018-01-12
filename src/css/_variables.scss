@@ -1,6 +1,11 @@
 $lightGray : #a1a9b0;
+$darkGray : #353535;
 $lightGreen : #3dc9b3;
 $darkGreen : #309383;
+
+$section__heading : $darkGray;
+$section__heading_border : #d2d7dd;
+$section__heading_triangle : $darkGray;
 
 $navigation__item : $lightGreen;
 $navigation__item_border_bottom : $darkGreen;
@@ -13,3 +18,5 @@ $intro__phrase: $lightGray;
 $intro__button_link : #fff;
 $intro__button : $lightGreen;
 $intro__button_border : $darkGreen;
+
+$about__background : #f3f5f8;
