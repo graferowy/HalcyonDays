@@ -1,1 +1,20 @@
-@import "./normalize";
+@import "./reset";
+@import "variables";
+@import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+body {
+  min-height: 100vh;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}

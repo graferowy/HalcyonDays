@@ -1,0 +1,35 @@
+// NAVIGATION
+
+@import "variables";
+@import "mixins";
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $navigation__item;
+  width: 100%;
+  transform: translateY(-700px);
+  transition: 2s transform ease;
+  box-shadow: 0px 10px 70px -4px rgb(120,120,120);
+  &_active {
+    transform: translateY(0px);
+  }
+  &__menu {
+    padding-top: 80px;
+  }
+  &__item {
+    text-align: center;
+    padding: 1.5em 0;
+    border-bottom: 1px solid $navigation__item_border_bottom;
+    border-top: 1px solid $navigation__item_border_top;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  &__link {
+    color: $navigation__link;
+    text-decoration: none;
+  }
+}

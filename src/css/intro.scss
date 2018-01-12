@@ -1,0 +1,51 @@
+// INTRO / JUMBOTRON
+
+@import "variables";
+@import "mixins";
+
+.intro {
+  height: 100vh;
+  width: 100%;
+  background: url('../img/jumbotron.jpg') center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__phrase {
+    width: 80%;
+    color: $intro__phrase;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+  }
+
+  &__button {
+    color: $intro__button_link;
+    background: $intro__button;
+    border-bottom: 2px solid $intro__button_border;
+    border-radius: 5px;
+    padding: 1.3em 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4em;
+  }
+
+  &__hamburger {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+  }
+
+  &__heading {
+    color: $intro__heading;
+    font-size: 3.5rem;
+    font-weight: 100;
+    &_part {
+      color: $intro__heading_part;
+    }
+  }
+}
