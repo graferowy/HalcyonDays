@@ -26,8 +26,10 @@ const paths = {
 
   dist: 'dist',
   distIndex: 'dist/index.html',
-  distCSS: 'dist/**/*.css',
-  distJS: 'dist/**/*.js',
+  distCSS: 'dist/css',
+  distCSSinject: 'dist/**/*.css',
+  distJS: 'dist/js',
+  distJSinject: 'dist/**/*.js',
   distIMG: 'dist/**/*.+(png|jpg|gif)'
 };
 
@@ -89,22 +91,22 @@ gulp.task('html:dist', () => {
 });
 
 gulp.task('css:dist', () => {
-  return gulp.src(paths.srcCSS)
+  return gulp.src(paths.tmpCSS)
     .pipe(concat('style.min.css'))
     .pipe(cleanCSS())
-    .pipe(gulp.dest(paths.dist));
+    .pipe(gulp.dest(paths.distCSS));
 });
 
 gulp.task('js:dist', () => {
-  return gulp.src(paths.srcJS)
+  return gulp.src(paths.tmpJS)
     .pipe(concat('script.min.js'))
     .pipe(uglify())
     .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-    .pipe(gulp.dest(paths.dist));
+    .pipe(gulp.dest(paths.distJS));
 });
 
 gulp.task('img:dist', () => {
-  return gulp.src(paths.srcIMG)
+  return gulp.src(paths.tmpIMG)
     .pipe(changed(paths.distIMG))
     .pipe(imagemin())
     .pipe(gulp.dest(paths.dist));
@@ -113,8 +115,8 @@ gulp.task('img:dist', () => {
 gulp.task('copy:dist', ['html:dist', 'css:dist', 'js:dist', 'img:dist']);
 
 gulp.task('inject:dist', ['copy:dist'], () => {
-  const css = gulp.src(paths.distCSS);
-  const js = gulp.src(paths.distJS);
+  const css = gulp.src(paths.distCSSinject);
+  const js = gulp.src(paths.distJSinject);
   return gulp.src(paths.distIndex)
     .pipe(inject( css, { relative:true } ))
     .pipe(inject( js, { relative:true } ))
