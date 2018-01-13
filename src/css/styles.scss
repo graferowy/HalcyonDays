@@ -89,4 +89,12 @@ img {
   &__link {
     text-decoration: none;
   }
+  @include screen('desktop') {
+    &__icon {
+      transition: color 0.3s ease;
+    }
+    &__link:hover &__icon {
+      color: $social__icon_hover;
+    }
+  }
 }

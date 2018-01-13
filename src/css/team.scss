@@ -1,6 +1,7 @@
 // TEAM SECTION
 
 @import "variables";
+@import "mixins";
 
 .team {
   padding: 5em 0;
@@ -70,5 +71,35 @@
 
   &__social {
     margin-top: 0.5em;
+  }
+}
+
+@include screen('desktop') {
+  .team {
+    &__row {
+      flex-direction: row;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 2em;
+    }
+
+    &__member {
+      width: 30%;
+    }
+
+    &__name {
+      margin-top: 2em;
+    }
+
+    &__bio {
+      line-height: 1.5em;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 3em;
+    }
+
+    &__social {
+      margin-top: 1.5em;
+    }
   }
 }

@@ -1,19 +1,35 @@
 // INVITATION SECTION
 
 @import "variables";
+@import "mixins";
 
 .invitation {
   background: $invitation__background;
-  padding: 3em 0;
+  padding: 3rem 0;
   text-align: center;
 
   &__button {
     background: inherit;
-    outline: 0;
     border: 1px solid $invitation__secondary;
     padding: 1.5em 3em;
     color: $invitation__secondary;
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
+}
+
+@include screen('desktop') {
+  .invitation {
+    padding: 4rem 0;
+
+    &__button {
+      cursor: pointer;
+      transition: all 0.5s ease;
+      padding: 2em 4em;
+      &:hover {
+        background: $invitation__secondary;
+        color: $invitation__text_hover;
+      }
+    }
   }
 }
