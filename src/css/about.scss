@@ -1,6 +1,7 @@
 // ABOUT SECTION
 
 @import "variables";
+@import "mixins";
 
 .about {
   background: $about__background;
@@ -16,5 +17,12 @@
     em {
       font-weight: bold;
     }
+  }
+}
+
+@include screen('desktop'){
+  .about__desc {
+    width: 60%;
+    line-height: 1.7em;
   }
 }

@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .offer {
   padding: 5em 0;
@@ -16,7 +17,7 @@
   }
 
   &__icon {
-    color: $lightGreen;
+    color: $offer__icon_background;
   }
 
   &__title {
@@ -44,5 +45,23 @@
     font-size: 0.9em;
     margin-top: 2rem;
     line-height: 1.2em;
+  }
+}
+
+@include screen('desktop') {
+  .offer {
+    &__row {
+      flex-direction: row;
+      width: 80%;
+      align-items: flex-end;
+      margin: 0 auto;
+      margin-top: 3em;
+    }
+    &__single {
+      margin-top: 0;
+    }
+    &__text {
+      line-height: 1.5em;
+    }
   }
 }

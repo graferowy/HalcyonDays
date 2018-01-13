@@ -19,11 +19,6 @@
     text-align: center;
     line-height: 1.5em;
     margin-top: 1.5em;
-    @include screen('desktop'){
-      width: 60%;
-      font-weight: 100;
-      letter-spacing: 2px;
-    }
   }
 
   &__button {
@@ -36,24 +31,12 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 4em;
-    @include screen('desktop'){
-      transition: all 0.2s ease-in-out;
-      &:hover {
-        background: darken($intro__button, 10%);
-        border-color: darken($intro__button_border, 10%);
-      }
-    }
   }
 
   &__hamburger {
     position: absolute;
     top: 3%;
     right: 5%;
-    @include screen('desktop'){
-      position: fixed;
-      right: 2%;
-      z-index: 5;
-    }
   }
 
   &__heading {
@@ -63,7 +46,29 @@
     &_part {
       color: $intro__heading_part;
     }
-    @include screen('desktop') {
+  }
+}
+
+@include screen('desktop'){
+  .intro {
+    &__phrase {
+      width: 60%;
+      font-weight: 100;
+      letter-spacing: 2px;
+    }
+    &__button {
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background: darken($intro__button, 10%);
+        border-color: darken($intro__button_border, 10%);
+      }
+    }
+    &__hamburger {
+      position: fixed;
+      right: 2%;
+      z-index: 5;
+    }
+    &__heading {
       text-transform: uppercase;
       letter-spacing: 15px;
       font-size: 4rem;

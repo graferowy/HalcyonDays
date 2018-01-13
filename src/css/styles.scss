@@ -47,6 +47,9 @@ body {
       top: 30%; left: 0; right: 0; bottom: 0;
       width: 80%;
       z-index: -1;
+      @include screen('desktop') {
+        width: 40%;
+      }
     }
   }
 
