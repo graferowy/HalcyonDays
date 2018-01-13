@@ -1,0 +1,19 @@
+// INVITATION SECTION
+
+@import "variables";
+
+.invitation {
+  background: $invitation__background;
+  padding: 3em 0;
+  text-align: center;
+
+  &__button {
+    background: inherit;
+    outline: 0;
+    border: 1px solid $invitation__secondary;
+    padding: 1.5em 3em;
+    color: $invitation__secondary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}

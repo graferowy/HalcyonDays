@@ -3,6 +3,10 @@
 @import "mixins";
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   font-family: 'Varela Round', sans-serif;
@@ -59,4 +63,9 @@ body {
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

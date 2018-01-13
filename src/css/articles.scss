@@ -1,0 +1,61 @@
+// ARTICLES SECTION
+
+@import "variables";
+
+.articles {
+  padding: 3em 0;
+
+  &__row {
+    flex-direction: column;
+  }
+
+  &__article {
+    width: 90%;
+    margin: 0 auto;
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  &__thumbnail {
+    display: block;
+    text-align: center;
+  }
+
+  &__image {
+    border: 5px solid $articles__image_border;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1rem;
+    &::after {
+      content: " //";
+    }
+    &::before {
+      display: block;
+      position: relative;
+      content: "";
+      border-bottom: 2px solid $darkGreen;
+      top: 2rem;
+      width: 15%;
+      margin: 0 auto;
+    }
+    &_link {
+      text-decoration: none;
+      letter-spacing: 2px;
+      color: $articles__title_link;
+    }
+  }
+
+  &__brief {
+    margin-top: 2rem;
+    text-align: justify;
+    text-align-last: center;
+    font-size: 0.9em;
+    color: darken($lightGray, 10%);
+    line-height: 1.1em;
+  }
+}

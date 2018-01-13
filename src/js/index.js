@@ -17,13 +17,13 @@ hamburgerIcon.addEventListener("click", () => {
 ** current review. After this action script breaks from the loop
 ** since there's no reason to go further.
 */
-const nextArticle = document.getElementById("next-article");
-const articles = document.querySelectorAll('.reviews__review');
-nextArticle.addEventListener("click", () => {
+const nextReview = document.getElementById("next-article");
+const reviews = document.querySelectorAll('.reviews__review');
+nextReview.addEventListener("click", () => {
   let i = 1;
-  for (let review of articles) {
+  for (let review of reviews) {
     if(review.classList.contains("reviews__review_active")) {
-      articles[i%articles.length].classList.toggle("reviews__review_active");
+      reviews[i%reviews.length].classList.toggle("reviews__review_active");
       review.classList.toggle("reviews__review_active");
       break;
     }
