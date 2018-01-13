@@ -1,13 +1,16 @@
 // REVIEWS SECTION
 
 @import "variables";
+@import "mixins";
 
 .reviews {
   background: $reviews__background;
-  padding: 5em 0;
-  transition: all 2s ease;
 
   &__section {
+    padding: 5em 0;
+  }
+
+  &__articles {
     position: relative;
   }
 
@@ -53,11 +56,34 @@
     padding: 1.3em 3em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    outline: 0;
     border: 0;
     border-bottom: 2px solid $reviews__button_border;
     display: block;
     margin: 0 auto;
     margin-top: 2em;
+  }
+}
+
+@include screen('desktop') {
+  .reviews {
+    overflow: hidden;
+    @include clearfix;
+    background: url(../img/reviews.jpg) center no-repeat;
+    background-size: contain;
+
+    &__section {
+      background: #fff;
+      width: 50%;
+      float: right;
+      box-shadow: -15px 0px 33px -19px rgba(0,0,0,0.5);
+    }
+    &__button {
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background: darken($reviews__button, 10%);
+        border-bottom: 2px solid darken($reviews__button_border, 10%);
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 // MOTTO SECTION
 
 @import "variables";
+@import "mixins";
 
 .motto {
   background: url('../img/motto.jpg') center;
@@ -35,5 +36,26 @@
     font-size: 1.5em;
     box-sizing: border-box;
     padding-top: 0.05em;
+  }
+}
+
+@include screen('desktop') {
+  .motto {
+    padding: 4rem 0;
+    &__quote {
+      font-size: 1.4em;
+      letter-spacing: 8px;
+      &::first-line {
+        font-size: 2em;
+      }
+    }
+    &__button {
+      margin-top: 1em;
+      transition: background-color 0.2s ease-in-out;
+      &:hover {
+        background: darken($motto__button, 10%);
+        border: 1px solid darken($motto__button_border, 10%);
+      }
+    }
   }
 }

@@ -59,6 +59,12 @@ body {
     &_light {
       background: $section__heading_triangle_light;
     }
+    &_review {
+      background: $about__background;
+      @include screen('desktop') {
+        background: $section__heading_triangle_light;
+      }
+    }
   }
 }
 
