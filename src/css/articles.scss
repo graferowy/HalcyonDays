@@ -77,6 +77,14 @@
   }
 }
 
+@include screen('tablet') {
+  .articles__brief {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+
 @include screen('desktop') {
   .articles {
     &__row {
@@ -123,9 +131,6 @@
 
     &__brief {
       max-width: 400px;
-      margin: 0 auto;
-      margin-top: 2rem;
-      line-height: 1.3em;
     }
   }
 }

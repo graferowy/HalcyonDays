@@ -61,14 +61,23 @@
   }
 }
 
-@include screen('desktop') {
+@include screen('tablet') {
   .subscription {
-    padding: 8em 0;
     background-size: cover;
 
     &__form {
       width: auto;
     }
+
+    &__input {
+      width: 400px;
+    }
+  }
+}
+
+@include screen('desktop') {
+  .subscription {
+    padding: 8em 0;
 
     &__heading {
       font-size: 1em;

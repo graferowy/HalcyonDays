@@ -74,17 +74,16 @@
   }
 }
 
-@include screen('desktop') {
+@include screen('tablet') {
   .team {
     &__row {
       flex-direction: row;
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
-      margin-top: 2em;
     }
 
     &__member {
-      width: 30%;
+      width: 33%;
     }
 
     &__name {
@@ -93,13 +92,25 @@
 
     &__bio {
       line-height: 1.5em;
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       margin-top: 3em;
     }
 
     &__social {
       margin-top: 1.5em;
+    }
+  }
+}
+
+@include screen('desktop') {
+  .team {
+    &__row {
+      width: 80%;
+      margin-top: 1em;
+    }
+    &__member {
+      width: 30%;
     }
   }
 }

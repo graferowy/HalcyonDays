@@ -45,13 +45,12 @@
   }
 }
 
-@include screen('desktop'){
+@include screen('tablet'){
   .contact {
     &__row {
       flex-direction: row;
       width: 90%;
       margin: 0 auto;
-      margin-top: 3rem;
     }
 
     &__method {
@@ -62,5 +61,11 @@
         border-bottom: 3px solid darken($contact__method_border, 2%);
       }
     }
+  }
+}
+
+@include screen('desktop'){
+  .contact__row {    
+    margin-top: 3rem;
   }
 }
