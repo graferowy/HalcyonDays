@@ -49,5 +49,14 @@ body {
   &__triangle {
     background: $about__background;
     padding: 0 2rem;
+    &_light {
+      background: $section__heading_triangle_light;
+    }
   }
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }

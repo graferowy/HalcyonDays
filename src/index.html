@@ -16,7 +16,7 @@
   <!-- inject:css -->
   <!-- endinject -->
   <!--[/htmlclean-protect]-->
-
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 </head>
 <body>
   <nav id="navigation" class="navigation">
@@ -51,7 +51,7 @@
   <section id="about" class="about">
     <div class="about_heading heading">
       <h2 class="heading__title">A creative portfolio template</h2>
-      <div class="heading__line">
+      <div class="heading__line" aria-hidden="true">
         <span class="heading__triangle">&#9662;</span>
       </div>
     </div>
@@ -60,21 +60,37 @@
     <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, ex est. Error odio eos quod velit, quia repellendus mollitia <em>itaque officia est</em> amet. Nihil, dicta similique placeat mollitia, porro quidem.</p>
   </section>
   <section id="offer" class="offer">
-    <h2 class="section__heading">Love what you do, and you'll do it well</h2>
-    <div class="offer__single">
-      <span class="offer__icon offer__icon_pc" aria-hidden="true"></span>
-      <h3 class="offer__title">Web Design</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis necessitatibus, nihil assumenda illum eaque quo distinctio velit quidem repellendus eos!</p>
+    <div class="about_heading heading">
+      <h2 class="heading__title">Love what you do and you'll do it well</h2>
+      <div class="heading__line" aria-hidden="true">
+        <span class="heading__triangle heading__triangle_light">&#9662;</span>
+      </div>
     </div>
-    <div class="offer__column">
-      <span class="offer__icon offer__icon_tag" aria-hidden="true"></span>
-      <h3 class="offer__title">Web Development</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis necessitatibus, nihil assumenda illum eaque quo distinctio velit quidem repellendus eos!</p>
-    </div>
-    <div class="offer__column">
-      <span class="offer__icon offer__icon_heart" aria-hidden="true"></span>
-      <h3 class="offer__title">We Love You</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis necessitatibus, nihil assumenda illum eaque quo distinctio velit quidem repellendus eos!</p>
+    <div class="offer__row row">
+      <div class="offer__single">
+        <span class="fa-layers fa-fw fa-7x" aria-hidden="true">
+          <i class="fas fa-circle offer__icon"></i>
+          <i class="fa-inverse fas fa-laptop fa-xs" data-fa-transform="shrink-8"></i>
+        </span>
+        <h3 class="offer__title">Web Design</h3>
+        <p class="offer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis necessitatibus, nihil assumenda illum eaque quo distinctio velit quidem repellendus eos!</p>
+      </div>
+      <div class="offer__single">
+        <span class="fa-layers fa-fw fa-7x" aria-hidden="true">
+          <i class="fas fa-circle offer__icon"></i>
+          <i class="fa-inverse fas fa-code fa-xs" data-fa-transform="shrink-8"></i>
+        </span>
+        <h3 class="offer__title">Web Development</h3>
+        <p class="offer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis necessitatibus, nihil assumenda illum eaque quo distinctio velit quidem repellendus eos!</p>
+      </div>
+      <div class="offer__single">
+        <span class="fa-layers fa-fw fa-7x" aria-hidden="true">
+          <i class="fas fa-circle offer__icon"></i>
+          <i class="fa-inverse fas fa-heart fa-xs" data-fa-transform="shrink-8"></i>
+        </span>
+        <h3 class="offer__title">We Love You</h3>
+        <p class="offer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis necessitatibus, nihil assumenda illum eaque quo distinctio velit quidem repellendus eos!</p>
+      </div>
     </div>
   </section>
   <section id="reviews" class="reviews">

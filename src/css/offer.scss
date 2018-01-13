@@ -1,0 +1,48 @@
+@import "variables";
+
+.offer {
+  padding: 5em 0;
+
+  &__row {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  &__single {
+    text-align: center;
+    &:not(:first-child){
+      margin-top: 1rem;
+    }
+  }
+
+  &__icon {
+    color: $lightGreen;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 1rem;
+    &::after {
+      content: " //";
+    }
+    &::before {
+      display: block;
+      position: relative;
+      content: "";
+      border-bottom: 2px solid $darkGreen;
+      top: 2rem;
+      width: 15%;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    width: 90%;
+    margin: 0 auto;
+    color: darken($lightGray, 10%);
+    font-size: 0.9em;
+    margin-top: 2rem;
+    line-height: 1.2em;
+  }
+}
