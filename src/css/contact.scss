@@ -1,0 +1,45 @@
+//CONTACT SECTION
+
+@import "variables";
+
+.contact {
+  padding: 5rem 0 3rem;
+  background: $contact_background;
+
+  &__row {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  &__method {
+    background: $contact__method;
+    text-align: center;
+    width: 90%;
+    border-bottom: 3px solid $contact__method_border;
+    margin: 0 auto;
+    margin-top: 1em;
+    padding: 2em 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $contact__title;
+    margin-top: 1.2em;
+  }
+
+  &__info {
+    color: darken($lightGray, 10%);
+    font-size: 0.9em;
+    margin-top: 0.5em;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: darken($lightGray, 10%);
+  }
+
+  &__social {
+    margin-top: 3rem;
+  }
+}

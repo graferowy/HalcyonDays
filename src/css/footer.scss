@@ -1,0 +1,38 @@
+//FOOTER SECTION
+
+@import "variables";
+
+.footer {
+  padding: 2rem 0;
+  background: $footer_background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $footer__text;
+
+  &__nav {
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline;
+    padding: 0 1em;
+    &:first-of-type{
+      border-right: 1px solid $footer__item_border;
+    }
+    &:last-of-type{
+      border-left: 1px solid $footer__item_border;
+    }
+  }
+
+  &__link {
+    color: $footer__link;
+    text-decoration: none;
+  }
+
+  &__copyright {
+    margin-top: 1.5em;
+    text-align: center;
+    line-height: 1.2em;
+  }
+}

@@ -245,36 +245,58 @@
     <a href="#intro" class="button subscription__button_goup" title="Go to the top of the page">&#9652;</a>
   </section>
   <section id="contact" class="contact">
-    <h2>Drop us a line</h2>
-    <div class="contact__method">
-      <span class="contact__icon contact__icon_address" aria-hidden="true"></span>
-      <h3 class="contact__title">Address</h3>
-      <p>Level 6, 23 Putt St, Sydney</p>
+    <div class="team_heading heading">
+      <h2 class="heading__title">Drop us a line</h2>
+      <div class="heading__line" aria-hidden="true">
+        <span class="heading__triangle">&#9662;</span>
+      </div>
     </div>
-    <div class="contact__method">
-      <span class="contact__icon contact__icon_phone" aria-hidden="true"></span>
-      <h3 class="contact__title">Phone</h3>
-      <p>+61 9 211 3741</p>
-    </div>
-    <div class="contact__method">
-      <span class="contact__icon contact__icon_address" aria-hidden="true"></span>
-      <h3 class="contact__title">Email</h3>
-      <p><a href="mailto:lorem@ipsum.com" title="Send us a mail"></a>lorem@ipsum.com</a></p>
+    <div class="row contact__row">
+      <div class="contact__method">
+        <span class="fas fa-map-pin fa-lg contact__icon" aria-hidden="true"></span>
+        <h3 class="contact__title">Address</h3>
+        <p class="contact__info">Level 6, 23 Putt St, Sydney</p>
+      </div>
+      <div class="contact__method">
+        <span class="fas fa-phone fa-lg contact__icon" aria-hidden="true"></span>
+        <h3 class="contact__title">Phone</h3>
+        <p class="contact__info">+61 9 211 3741</p>
+      </div>
+      <div class="contact__method">
+        <span class="fas fa-comments fa-lg contact__icon" aria-hidden="true"></span>
+        <h3 class="contact__title">Email</h3>
+        <p class="contact__info"><a href="mailto:lorem@ipsum.com" title="Send us a mail" class="contact__link">lorem@ipsum.com</a></p>
+      </div>
     </div>
     <div class="contact__social social">
-      <a href="#" title="Visit Our LinkedIn Profile"><span class="social__icon social__icon_linkedin" aria-hidden="true"></span></a>
-      <a href="#" title="Visit Our Twitter Page"><span class="social__icon social__icon_twitter" aria-hidden="true"></span></a>
-      <a href="mailto:lorem@ipsum.com" title="Send Us a mail"><span class="social__icon social__icon_mail" aria-hidden="true"></span></a>
+      <a href="#" title="Visit LinkedIn Profile" class="social__link">
+        <span class="fa-layers fa-fw fa-3x" aria-hidden="true">
+          <i class="fas fa-circle social__icon"></i>
+          <i class="fa-inverse fab fa-linkedin-in fa-xs" data-fa-transform="shrink-8"></i>
+        </span>
+      </a>
+      <a href="#" title="Visit Twitter Page" class="social__link">
+        <span class="fa-layers fa-fw fa-3x" aria-hidden="true">
+          <i class="fas fa-circle social__icon"></i>
+          <i class="fa-inverse fab fa-twitter fa-xs" data-fa-transform="shrink-8"></i>
+        </span>
+      </a>
+      <a href="mailto:lorem@ipsum.com" title="Send a mail" class="social__link">
+        <span class="fa-layers fa-fw fa-3x" aria-hidden="true">
+          <i class="fas fa-circle social__icon"></i>
+          <i class="fa-inverse far fa-envelope fa-xs" data-fa-transform="shrink-8"></i>
+        </span>
+      </a>
     </div>
   </section>
   <footer id="footer" class="footer">
     <nav>
       <ul class="footer__nav">
-        <li><a href="#">Terms &amp; Conditions</a></li>
-        <li><a href="#">Legals</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Terms &amp; Conditions</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Legals</a></li>
       </ul>
     </nav>
-    <p class="footer__copyright">Designed by <a href="#">Peter Finlan</a>. Developed by <a href="#">Filip Kaszczyński</a>.</p>
+    <p class="footer__copyright">Designed by <a href="#"  class="footer__link">Peter Finlan</a>. Developed by <a href="#"  class="footer__link">Filip Kaszczyński</a>.</p>
   </footer>
   <!--[htmlclean-protect]-->
   <!-- inject:js -->
