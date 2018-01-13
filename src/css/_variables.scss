@@ -2,6 +2,7 @@ $lightGray : #a1a9b0;
 $darkGray : #353535;
 $lightGreen : #3dc9b3;
 $darkGreen : #309383;
+$lightGraySectionBg : #f3f5f8;
 
 $section__heading : $darkGray;
 $section__heading_border : #d2d7dd;
@@ -20,4 +21,14 @@ $intro__button_link : #fff;
 $intro__button : $lightGreen;
 $intro__button_border : $darkGreen;
 
-$about__background : #f3f5f8;
+$about__background : $lightGraySectionBg;
+
+$reviews__background : $lightGraySectionBg;
+$reviews__button_link : #fff;
+$reviews__button : $lightGreen;
+$reviews__button_border : $darkGreen;
+
+$motto__quote : #fff;
+$motto__button : $lightGreen;
+$motto__button_border : $lightGreen;
+$motto__button_text : #fff;

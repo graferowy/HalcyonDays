@@ -1,0 +1,39 @@
+// MOTTO SECTION
+
+@import "variables";
+
+.motto {
+  background: url('../img/motto.jpg');
+  background-size: cover;
+  padding: 3em 0;
+
+  &__quote {
+    text-align: center;
+    color: $motto__quote;
+    line-height: 2em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    &::first-line {
+      font-size: 1.5em;
+    }
+  }
+
+  &__button {
+    display: block;
+    background: $motto__button;
+    border: 1px solid $motto__button_border;
+    border-radius: 50%;
+    text-decoration: none;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    color: $motto__button_text;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    padding-top: 0.05em;
+  }
+}

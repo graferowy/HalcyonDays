@@ -1,0 +1,63 @@
+// REVIEWS SECTION
+
+@import "variables";
+
+.reviews {
+  background: $reviews__background;
+  padding: 5em 0;
+  transition: all 2s ease;
+
+  &__section {
+    position: relative;
+  }
+
+  &__review {
+    position: absolute;
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: transform 2s ease,
+                opacity 1.5s ease,
+                height 1s ease 2s;
+    &_active {
+      position: relative;
+      transform: scaleY(1);
+      opacity: 1;
+      height: 100%;
+      transition: transform 2s ease,
+                  opacity 1.5s ease;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 1.5em;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    text-align: justify;
+    line-height: 1.2em;
+    color: darken($lightGray, 20%);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  &__button {
+    color: $reviews__button_link;
+    background: $reviews__button;
+    padding: 1.3em 3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid $reviews__button_border;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+}
