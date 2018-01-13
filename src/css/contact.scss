@@ -1,6 +1,7 @@
 //CONTACT SECTION
 
 @import "variables";
+@import "mixins";
 
 .contact {
   padding: 5rem 0 3rem;
@@ -41,5 +42,25 @@
 
   &__social {
     margin-top: 3rem;
+  }
+}
+
+@include screen('desktop'){
+  .contact {
+    &__row {
+      flex-direction: row;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+
+    &__method {
+      width: 30%;
+      transition: all 0.4s ease;
+      &:hover {
+        background: darken($contact__method, 2%);
+        border-bottom: 3px solid darken($contact__method_border, 2%);
+      }
+    }
   }
 }

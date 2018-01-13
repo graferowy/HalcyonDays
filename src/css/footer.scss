@@ -1,6 +1,7 @@
 //FOOTER SECTION
 
 @import "variables";
+@import "mixins";
 
 .footer {
   padding: 2rem 0;
@@ -34,5 +35,24 @@
     margin-top: 1.5em;
     text-align: center;
     line-height: 1.2em;
+  }
+}
+
+@include screen('desktop'){
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    &__copyright {
+      margin: 0;
+      line-height: normal;
+    }
+
+    &__link:hover {
+      color: lighten($footer__link, 10%);
+    }
   }
 }
