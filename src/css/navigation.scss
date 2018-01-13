@@ -1,16 +1,16 @@
 // NAVIGATION
 
 @import "variables";
+@import "mixins";
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
 
 .navigation {
   position: absolute;
   top: 0;
-  left: 0;
-  background: $navigation__item;
+  background-color: $navigation__item;
   width: 100%;
-  transform: translateY(-700px);
-  transition: 2s transform ease;
+  transform: translateY(-100%);
+  transition: 1s transform ease;
   box-shadow: 0px 10px 70px -4px rgb(120,120,120);
   &_active {
     transform: translateY(0px);
@@ -19,8 +19,6 @@
     padding-top: 80px;
   }
   &__item {
-    text-align: center;
-    padding: 1.5em 0;
     border-bottom: 1px solid $navigation__item_border_bottom;
     border-top: 1px solid $navigation__item_border_top;
     &:first-child {
@@ -30,5 +28,32 @@
   &__link {
     color: $navigation__link;
     text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 1.5em 0;
   }
+
+  @include screen('desktop') {
+    position: fixed;
+    z-index: 2;
+    width: 20%;
+    height: 100vh;
+    right: 0;
+    transform: translateY(0px);
+    transform: translateX(120%);
+    transition: transform 1s ease;
+    &_active {
+      transform: translateX(0px);
+    }
+    &__item {
+      transition: background 0.2s ease-in-out;
+      &:hover {
+        background-color: darken($navigation__item, 10%);
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+  
 }
