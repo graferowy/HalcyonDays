@@ -51,7 +51,6 @@
     }
     &__button {
       margin-top: 1em;
-      transition: background-color 0.2s ease-in-out;
       &:hover {
         background: darken($motto__button, 10%);
         border: 1px solid darken($motto__button_border, 10%);
