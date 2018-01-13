@@ -1,6 +1,7 @@
 // ARTICLES SECTION
 
 @import "variables";
+@import "mixins";
 
 .articles {
   padding: 3em 0;
@@ -20,10 +21,26 @@
   &__thumbnail {
     display: block;
     text-align: center;
+    position: relative;
+    max-width: 370px;
+    margin: 0 auto;
+    background: $articles__image_border;
+    overflow: hidden;
   }
 
   &__image {
+    display: block;
+    margin: 0 auto;
     border: 5px solid $articles__image_border;
+  }
+
+  &__overlay {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 
   &__title {
@@ -57,5 +74,58 @@
     font-size: 0.9em;
     color: darken($lightGray, 10%);
     line-height: 1.1em;
+  }
+}
+
+@include screen('desktop') {
+  .articles {
+    &__row {
+      flex-direction: row;
+      justify-content: space-around;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &__article {
+      width: 30%;
+      &:not(:first-child) {
+          margin-top: 0em;
+      }
+    }
+
+    &__overlay {
+      transition: .5s ease;
+      &_icon {
+        color: $articles__overlay_text;
+      }
+      &_text {
+        color: $articles__overlay_text;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 2em;
+      }
+    }
+
+    &__thumbnail:hover &__image {
+      opacity: 0.3;
+      filter: blur(10px);
+    }
+
+    &__thumbnail:hover &__overlay {
+      opacity: 1;
+    }
+
+    &__title_link:hover  {
+      color: $articles__title_link_hover;
+    }
+
+    &__brief {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 2rem;
+      line-height: 1.3em;
+    }
   }
 }
