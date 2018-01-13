@@ -1,0 +1,74 @@
+// TEAM SECTION
+
+@import "variables";
+
+.team {
+  padding: 5em 0;
+
+  &__row {
+    flex-direction: column;
+  }
+
+  &__member {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1rem;
+    &::after {
+      content: " //";
+    }
+    &::before {
+      display: block;
+      position: relative;
+      content: "";
+      border-bottom: 2px solid $darkGreen;
+      top: 2rem;
+      width: 15%;
+      margin: 0 auto;
+    }
+  }
+
+  &__bio {
+    margin-top: 2rem;
+    text-align: justify;
+    text-align-last: center;
+    font-size: 0.9em;
+    color: darken($lightGray, 30%);
+    line-height: 1.1em;
+  }
+
+  &__photo {
+    position: relative;
+    text-align: center;
+    background: $team__photo_border;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 200px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+    &_pentagon {
+      position: absolute;
+      height: 92%;
+      width: 92%;
+      left: 4%;
+      top: 4%;
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    }
+  }
+
+  &__social {
+    margin-top: 0.5em;
+  }
+}

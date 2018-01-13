@@ -69,3 +69,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.social {
+  display: flex;
+  justify-content: center;
+
+  &__icon {
+    color: $social__icon_background;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}
